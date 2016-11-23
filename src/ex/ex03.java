@@ -11,57 +11,58 @@ public class ex03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
         Scanner scn=new Scanner(System.in);
+        System.out.print("輸入A矩陣的長與寬值");
         int n1 =scn.nextInt();
         int m1 =scn.nextInt();
+        System.out.print("輸入B矩陣的長與寬值");
         int n2 =scn.nextInt();
         int m2 =scn.nextInt();
-        int x=0;
-        int y=0;
+        int sum=0;
         
         if(m1==n2){
         	int A[][]=new int[n1][m1];
         	int B[][]=new int[n2][m2];
         	int C[][]=new int[n1][m2];
-
+        	 System.out.print("輸入A矩陣的個數值");
         	for(int i=0;i<n1;i++){        	
         		for(int j=0;j<m1;j++){
         	A[i][j]=scn.nextInt();
         		}}
+        	 System.out.print("輸入B矩陣的個數值");
         	for(int i=0;i<n2;i++){        	
         		for(int j=0;j<m2;j++){
         	B[i][j]=scn.nextInt();
         		}}
-        	
-        	
+        	 System.out.println("A=");
         	for(int i=0;i<n1;i++){
         	  	for(int j=0;j<m1;j++){
           			System.out.print(A[i][j] + "\t");
         		}
         		System.out.println();}    
+         	System.out.println("B=");
         	for(int i=0;i<n2;i++){
         	  	for(int j=0;j<m2;j++){
           			System.out.print(B[i][j] + "\t");
         		}
-        		System.out.println();}    
+        		System.out.println();}                    	
         	for(int i=0;i<n1;i++){
-        		for(int l=0;l<n2;l++){
-        			x+=A[i][l]*B[l][i];
-        			        		}
-        		
         		for(int j=0;j<m2;j++){
-        			C[i][j]=x;
-        			        		}
-        	}
-        
+        			sum=0;
+        			for(int k=0;k<m1;k++){
+        				sum+=A[i][k]*B[k][j];
+        	    }
+                    C[i][j]=sum;
+         	 }
+         } 
+                 	System.out.println("A*B=C");
            for(int i=0;i<n1;i++){
         	  	for(int j=0;j<m2;j++){
-          			System.out.print(C[i][j] + "\t");
-        		}    System.out.println();
-      }
-        }
+          			System.out.print(C[i][j] + "\t");}
+        		    System.out.println();
+            }
+        }       
         else{
-        	System.out.print("重新輸入");
+        	System.out.print("請重新輸入");
         }
 	}
-
 }

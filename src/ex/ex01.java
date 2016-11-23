@@ -12,7 +12,7 @@ public class ex01 {
         Scanner scn=new Scanner(System.in);
         int n=scn.nextInt();
         int i=0;
-        int x=1;
+        int x=0;
         int y=0;
         while(n>0){
         	i=n%2;
