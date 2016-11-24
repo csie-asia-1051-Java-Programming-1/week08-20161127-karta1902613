@@ -11,6 +11,9 @@ public class ex01 {
 		// TODO Auto-generated method stub
         Scanner scn=new Scanner(System.in);
         int n=scn.nextInt();
+        fun(n);
+	}
+	public static void fun(int n){
         int i=0;
         int x=0;
         int y=0;

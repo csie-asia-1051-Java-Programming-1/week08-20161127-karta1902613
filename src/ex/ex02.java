@@ -13,7 +13,10 @@ public class ex02 {
 		System.out.println("輸入要轉換的數字");
 		int n=scn.nextInt();
 		System.out.println("要轉換的進位");
-        int c=scn.nextInt();	
+        int c=scn.nextInt();
+        fun(n,c);
+	}
+        public static void fun(int n,int c){
         int i=0;
         int x=0;
         int y=0;
@@ -27,6 +30,6 @@ public class ex02 {
     	    i=x%10;
          	x=x/10;
        	System.out.print(i);
-       }             
+      }             
 	}
 }
