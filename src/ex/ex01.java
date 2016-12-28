@@ -14,19 +14,13 @@ public class ex01 {
         fun(n);
 	}
 	public static void fun(int n){
-        int i=0;
-        int x=0;
-        int y=0;
-        while(n>0){
-        	i=n%2;
-          	n=n/2; 
-         x=x*10+i;
-        	y++;    	
-	   }
-        for(int j=0;j<y;j++){
-    	    i=x%10;
-         	x=x/10;
-       	System.out.print(i);
-       }             
+       int i=0,x=0,t=0;
+       while(n>0){
+    	   i=n%2;
+    	   n=n/2;
+    	   x+=i*(int)Math.pow(10,t);
+    	   t++;
+       }
+       System.out.print(x);
 	}
 }

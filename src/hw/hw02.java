@@ -1,12 +1,10 @@
 package hw;
-
-import java.util.Scanner;
-
 /*
  * Topic: 將前一題加強成可以做10以下的各種數字系統轉換 (必須使用遞迴)
  * Date: 2016/11/21
  * Author: 105021043 劉凱文
  */
+import java.util.Scanner;
 public class hw02 {
 
 	public static void main(String[] args) {
